@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ede9fe, #fce7f3, #e0f2fe);
+    color: #374151;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #7c3aed, #db2777);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    box-shadow: 0 4px 15px #c4b5fd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+/* Dark mode button */
+#theme-toggle {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #7c3aed;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    background: #f3e8ff;
+}
+
+/* Main container */
+main {
+    width: 90%;
+    max-width: 650px;
+    margin: 45px auto;
+}
+
+/* Search card */
+#search-form {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.15);
+    display: flex;
+    gap: 12px;
+}
+
+/* Input */
+#word-input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 2px solid #ddd6fe;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+#word-input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px #ede9fe;
+}
+
+/* Search button */
+#search-form button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #7c3aed;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#search-form button:hover {
+    background: #db2777;
+    transform: translateY(-2px);
+}
+
+/* Dictionary result container */
+#result-container {
+    background: white;
+    margin-top: 25px;
+    padding: 28px;
+    border-radius: 16px;
+    border-left: 6px solid #a855f7;
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.12);
+    overflow-wrap: anywhere;
+}
+
+#result-word {
+    color: #7c3aed;
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+#result-phonetic {
+    font-style: italic;
+    color: #6b7280;
+    margin-bottom: 14px;
+}
+
+/* Audio button */
+#audio-button {
+    background: #db2777;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#audio-button:hover {
+    background: #be185d;
+}
+
+/* Meanings, Synonyms, and Antonyms Boxes */
+.word-meanings,
+.word-synonyms,
+.word-antonyms {
+    margin-top: 16px;
+    padding: 16px;
+    background: #f3e8ff;
+    border-radius: 10px;
+    line-height: 1.7;
+}
+
+.word-meanings h3,
+.word-synonyms h3,
+.word-antonyms h3 {
+    color: #7c3aed;
+    font-size: 18px;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.word-meanings ul,
+.word-synonyms ul,
+.word-antonyms ul {
+    padding-left: 20px;
+}
+
+.word-meanings li,
+.word-synonyms li,
+.word-antonyms li {
+    margin: 6px 0;
+    color: #374151;
+}
+
+#error-message {
+    color: #dc2626;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+/* Dark mode appearance */
+body.dark-mode {
+    background: linear-gradient(135deg, #111827, #312e81);
+    color: white;
+}
+
+body.dark-mode #search-form,
+body.dark-mode #result-container {
+    background: #1f2937;
+    color: white;
+}
+
+body.dark-mode #word-input {
+    background: #374151;
+    color: white;
+    border-color: #7c3aed;
+}
+
+body.dark-mode #result-word {
+    color: #c4b5fd;
+}
+
+body.dark-mode #result-phonetic {
+    color: #9ca3af;
+}
+
+body.dark-mode .word-meanings,
+body.dark-mode .word-synonyms,
+body.dark-mode .word-antonyms {
+    background: #374151;
+    color: white;
+}
+
+body.dark-mode .word-meanings h3,
+body.dark-mode .word-synonyms h3,
+body.dark-mode .word-antonyms h3 {
+    color: #c4b5fd;
+}
+
+body.dark-mode .word-meanings li,
+body.dark-mode .word-synonyms li,
+body.dark-mode .word-antonyms li {
+    color: #e5e7eb;
+}
+
+body.dark-mode #theme-toggle {
+    background: #374151;
+    color: #c4b5fd;
+}
+
+body.dark-mode #theme-toggle:hover {
+    background: #4b5563;
+}
+
+/* Mobile design */
+@media (max-width: 480px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    #search-form {
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    #search-form button {
+        width: 100%;
+    }
+
+    #result-container {
+        padding: 20px;
+    }
+}
