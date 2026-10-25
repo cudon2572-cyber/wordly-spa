@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordly Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Wordly Dictionary</h1>
+        <button type="button" id="theme-toggle">Dark Mode</button>
+    </header>
+
+    <main>
+        <form id="search-form">
+            <input type="text" id="word-input" placeholder="enter any words..." required>
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="error-message"></div>
+
+        <section id="result-section">
+            <div id="result-container">
+                <h2 id="result-word"></h2>
+                <p id="result-phonetic"></p>
+                <button id="audio-button" style="display: none;">Play pronunciation</button>
+                
+                <div class="word-meanings">
+                    <h3>Definitions</h3>
+                    <ul id="definitions-list">
+                        <!-- Definitions will be populated here -->
+                    </ul>
+                </div>
+
+                <div class="word-synonyms">
+                    <h3>Synonyms</h3>
+                    <ul id="synonyms-list">
+                        <!-- Synonyms will be populated here -->
+                    </ul>
+                </div>
+
+                <div class="word-antonyms" id="antonyms-container">
+                    <h3>Antonyms</h3>
+                    <ul id="antonyms-list">
+                        <!-- Antonyms will be populated here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
