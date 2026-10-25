@@ -46,7 +46,7 @@ async function getWordData(word) {
 
     try {
         // Use encodeURIComponent to make sure the URL is safe for the API
-        const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
+        const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
         
         // If the server returns a 404 or 500 error
         if (!response.ok) {
